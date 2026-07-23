@@ -1,0 +1,17 @@
+name: supercooled-il-ml
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10,<3.13
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - xgboost
+  - pytorch
+  - rdkit
+  - matplotlib
+  - joblib
+  - pip
+  - pip:
+      - ilthermopy

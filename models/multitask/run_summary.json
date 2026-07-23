@@ -1,0 +1,39 @@
+{
+  "input": ".\\full_thermophysical_dataset\\full_thermophysicalJump100_T180_500_Cp700_3500.csv",
+  "n_rows": 137121,
+  "n_groups": 20588,
+  "train_groups": 15441,
+  "test_groups": 5147,
+  "train_rows": 101273,
+  "test_rows": 35848,
+  "degree": 4,
+  "n_features": 415,
+  "n_bits": 0,
+  "best_val_loss": 0.2942263282990704,
+  "cp_prior_params": {
+    "ridge_intercept": 1747.4025048330388,
+    "ridge_coef_scaled_inv_density": 0.0,
+    "scaler_mean_inv_density": 0.0008710725516328255,
+    "scaler_scale_inv_density": 1.0,
+    "n_cp_prior_train": 0,
+    "dropped_density_coupled_cp_prior": true,
+    "note": "Cp prior disabled; constant cp_mean stored only for backward-compatible loading."
+  },
+  "scaling": {
+    "rho_std": 164.46741185252955,
+    "cp_mean": 1747.4025048330388,
+    "cp_std": 382.05336763424486,
+    "logeta_mean": 1.4178067146267763,
+    "logeta_std": 0.776730851698855,
+    "invrho_scale": 0.0008710725516328255,
+    "tref": 298.15
+  },
+  "clean_physics_loss_training": true,
+  "density_coupled_cp_prior": false,
+  "cp_prediction_form": "Cp_pred = cp_mean + cp_std*NN_output; no ridge Cp-density prior",
+  "rho_physics_weight": 1.0,
+  "eta_physics_weight": 1.0,
+  "cp_const_weight": 0.2,
+  "loss_definition": "L = MSE(rho_free,rho_data) + MSE(logeta_free,logeta_data) + MSE(cp_struct,cp_data) + lambda_rho MSE(rho_free,rho_struct) + lambda_eta MSE(logeta_free,logeta_struct) + lambda_cp MSE(Cp_struct(T),Cp_struct(Tref))",
+  "checkpoint_note": "insitu_multitask_nn_no_morgan.pt is compatible with existing screening scripts; FULL_clean_physics_loss_training checkpoint includes free/direct heads."
+}
