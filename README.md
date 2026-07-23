@@ -1,8 +1,8 @@
-# Ionic-liquid thermophysical-property model
+# Glass-forming Liquid Thermophyiscal Property Prediction via Physics Informed Multitask Neural Networks
 
-This repository contains the cleaned training dataset, trained models, training code, and screening workflow used to predict viscosity, density, and specific heat capacity of ionic liquids and ionic-liquid/solvent mixtures.
+This repository contains the trained models, training code, and screening workflow used to predict viscosity, density, and specific heat capacity of ionic liquids and ionic-liquid/solvent mixtures. This can be extended to these property preduction from the SMILES strings of any molecular liquids particularly in the supecooling range.
 
-The final model uses RDKit-canonicalized SMILES and scalar molecular descriptors. The model was trained using a coupled loss function consisting of both data-based and physics-based loss terms. More details can be found in the publication.
+The final model uses RDKit-canonicalized SMILES and scalar molecular descriptors. The model was trained using a coupled loss function consisting of both data-based and physics-based loss terms. More details can be found in the publication in the Journal of Physical Chemistry B (DOI to be updated).
 
 ## Repository contents
 
